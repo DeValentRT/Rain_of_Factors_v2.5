@@ -97,7 +97,7 @@ function mostrarTarjetas() {
     tarjetasElemento.style.cssText = `
       position: absolute;
       top: 161px;
-      left: 3px;
+      left: 7px;
       width: 100%;
       text-align: center;
       color: white;
@@ -188,5 +188,6 @@ function init() {
   window.addEventListener('resize', ajustarEscala);
   window.addEventListener('orientationchange', ajustarEscala);
 }
+
 
 document.addEventListener('DOMContentLoaded', init);
