@@ -1,0 +1,134 @@
+/* 🔧 RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pixel', sans-serif;
+}
+
+/* 🎮 CONTENEDOR PRINCIPAL - AHORA RESPONSIVE COMO MOCHILA */
+#game-container {
+    position: relative;
+    width: 135px;
+    height: 240px;
+    overflow: hidden;
+    image-rendering: pixelated;
+    transform-origin: center center;
+    z-index: 1;
+}
+
+/* Estilo base para todas las capas */
+.game-layer {
+  position: absolute;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  transform-origin: center;
+  display: block;
+}
+
+/* Layers */
+#layer-background1 {
+  z-index: 1;
+  width: 135px;
+  height: 240px;
+}
+#layer-name-game { /* index.html */
+  z-index: 2;
+  width: 135px;
+  height: 240px;
+}
+#layer-interfaz { /* Rain_of_Factors.html */
+  z-index: 7;
+  width: 135px;
+  height: 240px;
+}
+#layer-final { /* Interfaz_final.html */
+  z-index: 4;
+  width: 135px;
+  height: 240px;
+}
+
+/* Estilo base para el btn play (index.html) */
+.play-button {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  image-rendering: pixelated;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.1s ease; /* Añadido para mejor feedback táctil */
+}
+/* Posición específica según el fondo (index.html) */
+#btn-play { top: 144px; left: 45px; }
+.play-button:active {
+  transform: scale(0.9);
+}
+
+/* Estilo base para todos los botones interactivos (Rain_of_Factors.html) */
+.game-button {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  image-rendering: pixelated;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.1s ease; /* Añadido para mejor feedback táctil */
+}
+/* Posiciones específicas según el fondo (Rain_of_Factors.html)*/
+#btn-izquierda { top: 209px; left: 6px; }
+#btn-derecha { top: 209px; left: 107px; }
+#btn-abajo { top: 209px; left: 74px; }
+#btn-inverso { top: 209px; left: 40px; }
+/* Posiciones específicas según el fondo (Interfaz_final.html)*/
+#btn-reset { top: 185px; left: 31px; }
+#btn-home { top: 185px; left: 78px; }
+
+.game-button:active {
+  transform: scale(0.85);
+}
+
+/* Estilo base para las hitboxes (Rain_of_Factors.html) */
+.hitbox-container {
+  position: absolute;
+  width: 18px;
+  height: 34px;
+  image-rendering: pixelated;
+  z-index: 5;
+  pointer-events: none;
+}
+/* Posiciones de las hitboxs inferiores (Rain_of_Factors.html) */
+#hitbox-inferior-1 { top: 163px; left: 8px; }
+#hitbox-inferior-2 { top: 163px; left: 42px; }
+#hitbox-inferior-3 { top: 163px; left: 76px; }
+#hitbox-inferior-4 { top: 163px; left: 109px; }
+/* Posiciones de las hitboxs superiores */
+#hitbox-superior-1 { top: -14px; left: 8px; }
+#hitbox-superior-2 { top: -14px; left: 42px; }
+#hitbox-superior-3 { top: -14px; left: 76px; }
+#hitbox-superior-4 { top: -14px; left: 109px; }
+
+/* Estilo para las tarjetas (Rain_of_Factors.html) */
+.tarjeta {
+  position: absolute;
+  width: 18px;
+  height: 34px;
+  image-rendering: pixelated;
+  z-index: 6;
+  pointer-events: none;
+}
